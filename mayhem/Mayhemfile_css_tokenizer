@@ -1,0 +1,11 @@
+project: savantenvs/lexbor
+target: css-tokenizer
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/css-tokenizer/testsuite
+
+cmds:
+  - cmd: /mayhem/css-tokenizer
+    libfuzzer: true
+    dictionary: /mayhem/css-tokenizer.dict
