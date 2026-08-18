@@ -1,0 +1,17 @@
+@charset "utf-8";
+@import url("foo.css") screen and (min-width: 100px);
+@media (min-width: 900px) and (max-width: 1200px) {
+  .foo, #bar > baz + qux ~ quux {
+    color: red !important;
+    background: url(data:image/png;base64,iVBORw0KGgo=) no-repeat;
+    content: "a\"b'c";
+    width: calc(100% - 2px);
+    --custom-prop: 12px;
+  }
+}
+@font-face {
+  font-family: 'X';
+  src: local('Y'), url(../f.woff2) format('woff2');
+}
+/* comment with unicode: \47\72 */
+a[href^="https://"]:not(.x)::before { content: '\2014'; }
