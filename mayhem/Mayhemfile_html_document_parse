@@ -1,0 +1,11 @@
+project: savantenvs/lexbor
+target: html-document-parse-mined-d190520
+
+# seed-from: https://app.mayhem.security/savantenvs/lexbor/html-document-parse
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/html-document-parse-mined-d190520/testsuite
+
+cmds:
+  - cmd: /mayhem/html-document-parse
+    libfuzzer: true
